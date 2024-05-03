@@ -1,0 +1,14 @@
+import allure
+
+from diplom_qa_guru.pages.city_page import city_page
+
+@allure.parent_suite('Web')
+@allure.suite('Локация')
+@allure.title(f"Проверка смены города на главной странице")
+def test_set_city():
+    city_page.open()
+
+    city_page.click_set_city()
+    city_page.choose_city()
+
+    city_page.check_selected_city()
