@@ -5,6 +5,7 @@ from diplom_qa_guru.pages.city_page import city_page
 @allure.parent_suite('Web')
 @allure.suite('Локация')
 @allure.title(f"Проверка смены города на главной странице")
+@allure.severity('Major')
 def test_set_city():
     city_page.open()
 

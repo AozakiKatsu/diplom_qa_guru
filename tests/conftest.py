@@ -1,40 +1,41 @@
 import os
 
+import allure_commons
 import pytest
-from selene import browser
+from selene import browser, support
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from dotenv import load_dotenv
-from utils import attach
+from diplom_qa_guru.utils import attach
 
 
-@pytest.fixture(scope="session", autouse=True)
-def load_env():
-    load_dotenv()
+# @pytest.fixture(scope="session", autouse=True)
+# def load_env():
+#     load_dotenv()
 
 
 @pytest.fixture(scope='function', autouse=True)
 def setup_browser():
-    options = Options()
-    selenoid_capabilities = {
-        "browserName": "chrome",
-        "browserVersion": "122.0",
-        "selenoid:options": {
-            "enableVNC": True,
-            "enableVideo": True
-        }
-    }
+    #     options = Options()
+    #     selenoid_capabilities = {
+    #         "browserName": "chrome",
+    #         "browserVersion": "122.0",
+    #         "selenoid:options": {
+    #             "enableVNC": True,
+    #             "enableVideo": True
+    #         }
+    #     }
+    #
+    #     selenoid_login = os.getenv("SELENOID_LOGIN")
+    #     selenoid_pass = os.getenv("SELENOID_PASS")
+    #     selenoid_url = os.getenv("SELENOID_URL")
+    #
+    #     options.capabilities.update(selenoid_capabilities)
+    #     driver = webdriver.Remote(
+    #         command_executor=f"https://{selenoid_login}:{selenoid_pass}@{selenoid_url}/wd/hub",
+    #         options=options)
 
-    selenoid_login = os.getenv("SELENOID_LOGIN")
-    selenoid_pass = os.getenv("SELENOID_PASS")
-    selenoid_url = os.getenv("SELENOID_URL")
-
-    options.capabilities.update(selenoid_capabilities)
-    driver = webdriver.Remote(
-        command_executor=f"https://{selenoid_login}:{selenoid_pass}@{selenoid_url}/wd/hub",
-        options=options)
-
-    browser.config.driver = driver
+    # browser.config.driver = driver
 
     browser.config.base_url = 'https://kazanexpress.ru'
     driver_options = webdriver.ChromeOptions()
@@ -43,11 +44,12 @@ def setup_browser():
     browser.config.window_width = 1920
     browser.config.driver_options = driver_options
 
+    browser.config._wait_decorator = support._logging.wait_with(context=allure_commons._allure.StepContext)
     yield browser
 
     attach.add_screenshot(browser)
     attach.add_logs(browser)
     attach.add_html(browser)
-    attach.add_video(browser)
+    # attach.add_video(browser)
 
     browser.quit()

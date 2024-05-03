@@ -5,6 +5,7 @@ from diplom_qa_guru.pages.login_page import login_page
 @allure.parent_suite('Web')
 @allure.suite('Авторизация')
 @allure.title(f"Проверка ввода неправильного номера телефона")
+@allure.severity('Critical')
 def test_login_negative():
     login_page.open()
 
