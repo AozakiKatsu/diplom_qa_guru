@@ -2,6 +2,7 @@ import allure
 
 from diplom_qa_guru.pages.favorites_page import favorites_page
 
+
 @allure.parent_suite('Web')
 @allure.suite('Избранное')
 @allure.title(f"Удаление товара из избранного")

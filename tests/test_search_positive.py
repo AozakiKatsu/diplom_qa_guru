@@ -2,6 +2,7 @@ import allure
 
 from diplom_qa_guru.pages.search_page import search_page
 
+
 @allure.parent_suite('Web')
 @allure.suite('Поиск')
 @allure.title(f"Проверка поиска")
