@@ -1,6 +1,6 @@
 import allure
 
-from diplom_qa_guru.pages.search_page import search_page
+from diplom_qa_guru.pages.web.search_page import search_page
 
 
 @allure.parent_suite('Web')

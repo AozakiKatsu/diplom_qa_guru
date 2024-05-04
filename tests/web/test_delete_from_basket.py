@@ -1,6 +1,6 @@
 import allure
 
-from diplom_qa_guru.pages.basket_page import basket_page
+from diplom_qa_guru.pages.web.basket_page import basket_page
 
 
 @allure.parent_suite('Web')
