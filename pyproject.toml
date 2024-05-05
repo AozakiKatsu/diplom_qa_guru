@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "diplom-qa-guru"
+version = "0.1.0"
+description = "diploma qa guru"
+authors = ["Irina Luchkova <shtejn@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pytest = "8.0.2"
+selene = "2.0.0rc9"
+selenium = "^4.20.0"
+allure-pytest = "2.13.2"
+python-dotenv = "^1.0.1"
+requests = "^2.31.0"
+jsonschema = "^4.22.0"
+appium-python-client = "^4.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
