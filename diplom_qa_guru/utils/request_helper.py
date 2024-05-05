@@ -14,7 +14,8 @@ from diplom_qa_guru.pages.api.token import api_token
 load_dotenv()
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
-    "Content-Type": "application/json"}
+    "Content-Type": "application/json",
+    "authorization": "Basic a2F6YW5leHByZXNzLWN1c3RvbWVyOmN1c3RvbWVyU2VjcmV0S2V5"}
 API_URL = os.getenv('API_URL')
 
 
