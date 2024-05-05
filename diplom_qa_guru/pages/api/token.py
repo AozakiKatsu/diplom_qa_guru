@@ -1,15 +1,23 @@
 import os
 import requests
+from dotenv import load_dotenv
 
-headers = {"Authorization": "Basic a2F6YW5leHByZXNzLWN1c3RvbWVyOmN1c3RvbWVyU2VjcmV0S2V5"}
+load_dotenv()
+usernameAPI = os.getenv('API_USERNAME')
+passwordAPI = os.getenv('API_PASSWORD')
+API_URL = os.getenv('API_URL')
+headers = {"authorization": "Basic a2F6YW5leHByZXNzLWN1c3RvbWVyOmN1c3RvbWVyU2VjcmV0S2V5",
+           'User-Agent': os.getenv('API_USER_AGENT')}
 
 json_data = {
     "grant_type": "password",
-    "username": '89045372176',
-    "password": '1122334455aA',
+    "username": usernameAPI,
+    "password": passwordAPI,
 }
 
 
-def test_api_token():
-    api_request = requests.post(url='https://api.kazanexpress.ru/api/oauth/token/?grant_type=password&username=89045372176&password=1122334455aA', data=json_data, headers=headers)
+def api_token():
+    api_request = requests.post(f'https://{API_URL}' + '/oauth/token/', data=json_data, headers=headers)
+
+    assert api_request.status_code == 200
     return api_request.json()['access_token']
