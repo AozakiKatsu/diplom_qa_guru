@@ -1,8 +1,12 @@
 import json
+import os
 
 import allure
+from dotenv import load_dotenv
 
 from diplom_qa_guru.utils.request_helper import api_post
+
+load_dotenv()
 
 
 @allure.parent_suite('API')
@@ -16,7 +20,7 @@ def test_change_user_contacts():
         "firstname": "Петр",
         "lastname": "Петров",
         "patronymic": "Петрович",
-        "phone": "+7 (904) 537-21-76",
+        "phone": os.getenv('API_PHONENUMBER'),
         "sex": "",
         "birthDate": None,
         "accountId": 0
