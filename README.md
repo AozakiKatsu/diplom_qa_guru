@@ -18,6 +18,7 @@
 * Интеграция с Allure TestOps
 * Автоматизация отчетности о тестовых прогонах и тест-кейсах в Jira
 * Запуск web/UI автотестов в Selenoid
+* Запуск мобильных автотестов в Browserstack
 
  ### Список проверок, реализованных в web/UI автотестах
 
@@ -70,15 +71,31 @@ pytest .
 3. Выбрать тесты для запуска
 4. Результат запуска сборки можно посмотреть в отчёте Allure, в запуске Allure TestOps
 ----
+
+### Параметры сборки
+
+>
+> ><code>tests</code> – запускает все тесты проекта api, mobile, web.
+>
+> ><code>tests/api</code> – запускает только api тесты.
+>
+> ><code>tests/mobile</code> – запускает только mobile тесты.
+> 
+> ><code>tests/web</code> – запускает только web тесты.
 ### Allure отчет
 
 
 #### Общие результаты
-![This is an image](design/images/allure_report.png)
+![This is an image](design/images/allure.png)
+#### Список тест кейсов в Allure 
+![This is an image](design/images/allure list.png)
 #### Список тест кейсов в Allure TestOps
-![This is an image](design/images/allure-testops.png)
+![This is an image](design/images/allure testops.png)
+#### Пример тест кейса в Allure с логированием и attachments 
+![This is an image](design/images/allure tk log.png)
 #### Нотификация в Telegram
-![This is an image](design/images/бот.png)
-#### Видео прохождения теста
-![This is an video](design/images/video.mp4)
-
+![This is an image](design/images/bot.png)
+#### Видео прохождения теста Web
+![This is an video](design/images/video.gif)
+#### Видео прохождения теста Mobile
+![This is an video](design/images/mobile.gif)
