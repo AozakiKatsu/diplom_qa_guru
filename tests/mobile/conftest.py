@@ -11,7 +11,7 @@ import config
 from diplom_qa_guru.utils import attach
 
 
-@pytest.fixture(scope="session", autouse=True)
+@pytest.fixture(scope="function", autouse=True)
 def load_env():
     load_dotenv()
 
