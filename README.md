@@ -99,3 +99,6 @@ pytest .
 ![This is an video](design/images/video.gif)
 #### Видео прохождения теста Mobile
 ![This is an video](design/images/mobile.gif)
+
+
+
