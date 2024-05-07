@@ -18,7 +18,7 @@ def test_change_user_contacts():
     payload = json.dumps({
         "email": "mail@mail.ru",
         "firstname": "Петр",
-        "lastname": "Петров",
+        "lastname": "Петрова",
         "patronymic": "Петрович",
         "phone": os.getenv('API_PHONE_NUMBER'),
         "sex": "",
