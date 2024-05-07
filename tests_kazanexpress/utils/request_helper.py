@@ -9,7 +9,7 @@ from requests import Response
 from allure_commons._allure import step
 from allure_commons.types import AttachmentType
 
-from diplom_qa_guru.pages.api.token import api_token
+from tests_kazanexpress.pages.api.token import api_token
 
 load_dotenv()
 headers = {

@@ -4,7 +4,7 @@ import os
 import allure
 from dotenv import load_dotenv
 
-from diplom_qa_guru.utils.request_helper import api_post
+from tests_kazanexpress.utils.request_helper import api_post
 
 load_dotenv()
 

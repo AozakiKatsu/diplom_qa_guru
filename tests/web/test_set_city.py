@@ -1,6 +1,6 @@
 import allure
 
-from diplom_qa_guru.pages.web.city_page import city_page
+from tests_kazanexpress.pages.web.city_page import city_page
 
 
 @allure.parent_suite('Web')

@@ -1,6 +1,6 @@
 import allure
 
-from diplom_qa_guru.utils.request_helper import api_get
+from tests_kazanexpress.utils.request_helper import api_get
 from jsonschema import validate
 
 from schemas.get_cities import cities

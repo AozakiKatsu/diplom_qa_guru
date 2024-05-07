@@ -1,6 +1,6 @@
 import allure
 
-from diplom_qa_guru.pages.web.favorites_page import favorites_page
+from tests_kazanexpress.pages.web.favorites_page import favorites_page
 
 
 @allure.parent_suite('Web')

@@ -1,7 +1,7 @@
 import allure
 
-from diplom_qa_guru.pages.mobile.mobile_basket_page import basket_page
-from diplom_qa_guru.pages.mobile.skip_promo_widget_page import skip_widget
+from tests_kazanexpress.pages.mobile.mobile_basket_page import basket_page
+from tests_kazanexpress.pages.mobile.skip_promo_widget_page import skip_widget
 
 
 @allure.parent_suite('Mobile')

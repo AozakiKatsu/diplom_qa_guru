@@ -1,6 +1,6 @@
 import allure
 
-from diplom_qa_guru.pages.web.login_page import login_page
+from tests_kazanexpress.pages.web.login_page import login_page
 
 
 @allure.parent_suite('Web')

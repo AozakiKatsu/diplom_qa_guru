@@ -6,7 +6,7 @@ from selene import browser, support
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from dotenv import load_dotenv
-from diplom_qa_guru.utils import attach
+from tests_kazanexpress.utils import attach
 
 
 # @pytest.fixture(scope="session", autouse=True)

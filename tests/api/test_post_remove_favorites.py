@@ -2,7 +2,7 @@ import json
 
 import allure
 
-from diplom_qa_guru.utils.request_helper import api_post
+from tests_kazanexpress.utils.request_helper import api_post
 
 
 @allure.parent_suite('API')
