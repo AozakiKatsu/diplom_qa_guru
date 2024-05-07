@@ -47,5 +47,3 @@ def context_options(context):
         )
 
     return options
-
-

@@ -86,13 +86,15 @@ pytest .
 
 
 #### Общие результаты
-![This is an image](design/images/allure.png)
+![This is an image](design/images/allure_report.png)
 #### Список тест кейсов в Allure 
-![This is an image](design/images/allure list.png)
-#### Список тест кейсов в Allure TestOps
-![This is an image](design/images/allure testops.png)
+![This is an image](design/images/allure_list_tk.png)
 #### Пример тест кейса в Allure с логированием и attachments 
-![This is an image](design/images/allure tk log.png)
+![This is an image](design/images/allure_log_attach.png)
+#### Примеры запуска в Allure TestOps
+![This is an image](design/images/allure_testops.png)
+
+![This is an image](design/images/allure_testops_web.png)
 #### Нотификация в Telegram
 ![This is an image](design/images/bot.png)
 #### Видео прохождения теста Web

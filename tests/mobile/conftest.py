@@ -29,6 +29,13 @@ def context(request):
     return request.config.getoption("--context")
 
 
+def pytest_configure(config):
+    context = config.getoption("--context")
+    env_file_path = f".env.{context}"
+
+    load_dotenv(dotenv_path=env_file_path)
+
+
 @pytest.fixture(scope='function', autouse=True)
 def mobile_management(context):
     options = config.context_options(context=context)

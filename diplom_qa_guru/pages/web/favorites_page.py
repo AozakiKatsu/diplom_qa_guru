@@ -1,3 +1,5 @@
+import time
+
 import allure
 from selene import browser, have
 
@@ -13,8 +15,13 @@ class FavoritesPage:
         browser.element('[data-test-id=input__search]').type('Кастрюля из нержавеющей стали').press_enter()
         browser.all('[data-test-id=item__product-card]').element_by(
             have.text('Кастрюля из нержавеющей стали со стеклянной крышкой')).click()
-        browser.all('[data-test-id=item__sku]').element_by(have.text('2 литра')).click()
-        browser.all('[data-test-id=button__add-to-favorites]').element_by(have.text('В желания')).click()
+        try:
+            browser.all('.radio-text-wrapper').element_by(have.text('2 литра')).click()
+            browser.element('.add-cart>.favorite').click()
+        except:
+            browser.all('[data-test-id=item__sku]').element_by(have.text('2 литра')).click()
+            browser.all('[data-test-id=button__add-to-favorites]').element_by(have.text('В желания')).click()
+
         browser.element('[data-test-id=button__wishes]').click()
 
     @allure.step('Проверяем то что в избранном находится товар добавленный нами')
@@ -23,6 +30,7 @@ class FavoritesPage:
 
     @allure.step('Удаляем товар из избранного')
     def delete_item_from_favorites(self):
+        time.sleep(2)
         browser.element('[data-test-id=button__add-to-favorites]').click()
 
     @allure.step('Проверяем то что в избранном нет товаров')
