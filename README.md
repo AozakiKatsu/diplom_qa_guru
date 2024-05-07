@@ -63,10 +63,10 @@ pytest .
 ```
 ----
 ### Удаленный запуск автотестов выполняется на сервере Jenkins
-> <a target="_blank" href="https://jenkins.autotests.cloud/job/diplom_aozaki/">Ссылка на проект в Jenkins</a>
+> <a target="_blank" href="https://jenkins.autotests.cloud/job/diplom_aozaki_qaguru">Ссылка на проект в Jenkins</a>
 #### Для запуска автотестов в Jenkins
 
-1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/diplom_aozaki/">проект</a>
+1. Открыть <a target="_blank" href="https://jenkins.autotests.cloud/job/diplom_aozaki_qaguru">проект</a>
 2. Нажать кнопку `Build with parameters`
 3. Выбрать тесты для запуска
 4. Результат запуска сборки можно посмотреть в отчёте Allure, в запуске Allure TestOps
