@@ -4,7 +4,6 @@ import allure
 from selene import browser, have, be
 
 
-
 class BasketPage:
     @allure.step('Открываем браузер на странице https://kazanexpress.ru/')
     def open(self):
