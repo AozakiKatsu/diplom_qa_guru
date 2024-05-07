@@ -97,6 +97,8 @@ pytest .
 ![This is an image](design/images/allure_testOps_web.png)
 #### Список тест кейсов в Allure TestOps
 ![This is an image](design/images/testops_tk.png)
+#### Интеграция с Jira
+![This is an image](design/images/jira.png)
 #### Нотификация в Telegram
 ![This is an image](design/images/bot.png)
 #### Видео прохождения теста Web
