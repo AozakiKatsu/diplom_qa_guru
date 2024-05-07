@@ -13,7 +13,7 @@ from diplom_qa_guru.pages.api.token import api_token
 
 load_dotenv()
 headers = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "User-Agent": os.getenv('API_USER_AGENT'),
     "Authorization": "Bearer " + api_token(),
     "Content-Type": "application/json"}
 API_URL = os.getenv('API_URL')
@@ -58,7 +58,7 @@ def response_attaching(response: Response):
         attachment_type=AttachmentType.JSON,
         extension="json",
     )
-    if response.request.body:  # логирование тела запроса если оно есть
+    if response.request.body:
         allure.attach(
             body=json.dumps(response.request.body, indent=4, ensure_ascii=True),
             name="Request body",
