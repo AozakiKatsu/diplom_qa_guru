@@ -2,7 +2,7 @@ import json
 
 import allure
 
-from tests_kazanexpress.utils.request_helper import api_post
+from kazanexpress_project.utils.request_helper import api_post
 
 
 @allure.parent_suite('API')
@@ -20,6 +20,7 @@ def test_post_add_to_favorites():
         api_post(url, data=data)
     with allure.step('Удаляем товар из избранного'):
         response = api_post(url=url_remove, data=data)
+
     with allure.step('Проверяем удалился ли товар из избранного'):
         assert response.json()['timestamp']
         assert response.status_code == 200

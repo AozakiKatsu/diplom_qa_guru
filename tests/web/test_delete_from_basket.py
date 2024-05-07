@@ -1,6 +1,6 @@
 import allure
 
-from tests_kazanexpress.pages.web.basket_page import basket_page
+from kazanexpress_project.pages.web.basket_page import basket_page
 
 
 @allure.parent_suite('Web')

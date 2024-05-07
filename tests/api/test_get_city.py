@@ -1,6 +1,6 @@
 import allure
 
-from tests_kazanexpress.utils.request_helper import api_get
+from kazanexpress_project.utils.request_helper import api_get
 from jsonschema import validate
 
 from schemas.get_cities import cities
@@ -14,6 +14,7 @@ def test_get_cities():
     url = "/main/cities"
     with allure.step('Выполняем запрос на получение списка городов'):
         response = api_get(url)
+
     with allure.step('Проверяем статус код ответа'):
         assert response.status_code == 200
     with allure.step('Проверяем количество городов в выдаче'):

@@ -1,6 +1,6 @@
 import allure
 
-from tests_kazanexpress.pages.web.favorites_page import favorites_page
+from kazanexpress_project.pages.web.favorites_page import favorites_page
 
 
 @allure.parent_suite('Web')

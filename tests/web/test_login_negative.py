@@ -1,6 +1,6 @@
 import allure
 
-from tests_kazanexpress.pages.web.login_page import login_page
+from kazanexpress_project.pages.web.login_page import login_page
 
 
 @allure.parent_suite('Web')

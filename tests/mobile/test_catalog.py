@@ -1,7 +1,7 @@
 import allure
 
-from tests_kazanexpress.pages.mobile.mobile_catalog_page import catalog_page
-from tests_kazanexpress.pages.mobile.skip_promo_widget_page import skip_widget
+from kazanexpress_project.pages.mobile.mobile_catalog_page import catalog_page
+from kazanexpress_project.pages.mobile.skip_promo_widget_page import skip_widget
 
 
 @allure.parent_suite('Mobile')

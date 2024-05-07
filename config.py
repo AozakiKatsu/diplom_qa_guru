@@ -3,7 +3,7 @@ import os
 import pytest
 from dotenv import load_dotenv
 from appium.options.android import UiAutomator2Options
-from tests_kazanexpress import utils
+from kazanexpress_project.utils import file
 
 
 @pytest.fixture(scope="session", autouse=True)
@@ -18,14 +18,14 @@ def context_options(context):
         options.load_capabilities({
             'remote_url': os.getenv('URL_LOCAL'),
             'udid': os.getenv('DEVICE_NAME_EMULATE'),
-            'app': utils.file.abs_path_from_project(os.getenv('APP_LOCAL'))
+            'app': file.abs_path_from_project(os.getenv('APP_LOCAL'))
         })
 
     if context == 'local_real_device':
         options.load_capabilities({
             'remote_url': os.getenv('URL_LOCAL'),
             'udid': os.getenv('DEVICE_NAME_LOCAL'),
-            'app': utils.file.abs_path_from_project(os.getenv('APP_LOCAL'))
+            'app': file.abs_path_from_project(os.getenv('APP_LOCAL'))
         })
 
     if context == 'bstack':

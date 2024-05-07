@@ -4,7 +4,7 @@ import os
 import allure
 from dotenv import load_dotenv
 
-from tests_kazanexpress.utils.request_helper import api_post
+from kazanexpress_project.utils.request_helper import api_post
 
 load_dotenv()
 
@@ -20,13 +20,14 @@ def test_change_user_contacts():
         "firstname": "Петр",
         "lastname": "Петров",
         "patronymic": "Петрович",
-        "phone": os.getenv('API_PHONENUMBER'),
+        "phone": os.getenv('API_PHONE_NUMBER'),
         "sex": "",
         "birthDate": None,
         "accountId": 0
     })
-    with allure.step('Выполняем запрос на изменение персоальных данных'):
+    with allure.step('Выполняем запрос на изменение персональных данных'):
         response = api_post(url, data=payload)
+
     with allure.step('Проверяем статус код ответа'):
         assert response.status_code == 200
     with allure.step('Проверяем изменились данные пользователя'):
