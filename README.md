@@ -94,7 +94,7 @@ pytest .
 #### Примеры запуска в Allure TestOps
 ![This is an image](design/images/allure_testops.png)
 
-![This is an image](design/images/allure_testops_web.png)
+![This is an image](design/images/allure_testOps_web.png)
 #### Нотификация в Telegram
 ![This is an image](design/images/bot.png)
 #### Видео прохождения теста Web
