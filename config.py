@@ -38,7 +38,7 @@ def context_options(context):
         })
         options.load_capabilities({
             'bstack:options': {
-                'projectName': 'Wikipedia project',
+                'projectName': 'KazanExpress',
                 'buildName': 'browserstack-build-1',
                 'sessionName': 'BStack test',
                 'userName': os.getenv('BS_LOGIN'),
