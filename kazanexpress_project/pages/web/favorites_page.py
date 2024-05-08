@@ -1,14 +1,13 @@
 import time
 
 import allure
-from selene import browser, have
+from selene import browser, have, be
 
 
 class FavoritesPage:
     @allure.step('Открываем браузер на странице https://kazanexpress.ru/')
     def open(self):
         browser.open('/')
-        return self
 
     @allure.step('Находим и добавляем товар в избранное')
     def add_item_to_favorites(self):
@@ -30,7 +29,7 @@ class FavoritesPage:
 
     @allure.step('Удаляем товар из избранного')
     def delete_item_from_favorites(self):
-        time.sleep(2)
+        browser.element('[data-test-id="list__products"] .list-complete-item').should(be.visible)
         browser.element('[data-test-id=button__add-to-favorites]').click()
 
     @allure.step('Проверяем то что в избранном нет товаров')

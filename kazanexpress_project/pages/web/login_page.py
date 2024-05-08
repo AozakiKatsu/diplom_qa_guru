@@ -6,7 +6,7 @@ class LoginPage:
     @allure.step('Открываем браузер на странице https://kazanexpress.ru/')
     def open(self):
         browser.open('/')
-        return self
+
 
     @allure.step('Кликаем на кнопку логина')
     def click_login_button(self):
