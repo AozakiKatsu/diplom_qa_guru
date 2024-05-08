@@ -15,27 +15,19 @@ class MobileFavoritesPage:
         browser.element((AppiumBy.XPATH, '//android.view.View[@content-desc="Вернуться назад"]')).click()
         browser.element((AppiumBy.ID, 'com.kazanexpress.ke_app:id/navigation_favorite')).click()
 
-        return self
-
     @allure.step('Проверяем то что в избранном находится 1 товар добавленный нами')
     def should_item_in_favorites(self):
         browser.element((AppiumBy.ID, 'com.kazanexpress.ke_app:id/title')).should(
             have.text('Кастрюля из нержавеющей стали'))
 
-        return self
-
     @allure.step('Удаляем товар из избранного')
     def delete_item_from_favorites(self):
         browser.element((AppiumBy.ID, 'com.kazanexpress.ke_app:id/favorite')).click()
-
-        return self
 
     @allure.step('Проверяем то что в избранном нет товаров')
     def should_favorites_empty(self):
         browser.element((AppiumBy.XPATH, '//android.widget.TextView[@text="Добавьте то, что понравилось"]')).should(
             be.visible)
-
-        return self
 
 
 favorites_page = MobileFavoritesPage()

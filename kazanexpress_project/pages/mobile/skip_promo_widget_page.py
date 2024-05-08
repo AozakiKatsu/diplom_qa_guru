@@ -21,7 +21,6 @@ class SkipPromoWidget:
             browser.element((AppiumBy.ID, 'com.kazanexpress.ke_app:id/onboarding_skip_button')).click()
         except:
             browser.element((AppiumBy.XPATH, '//android.widget.ScrollView/android.view.View[2]')).click()
-        return self
 
 
 skip_widget = SkipPromoWidget()

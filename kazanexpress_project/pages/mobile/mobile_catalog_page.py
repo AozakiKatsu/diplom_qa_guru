@@ -13,8 +13,6 @@ class MobileCatalogPage:
         browser.all((AppiumBy.ID, 'com.kazanexpress.ke_app:id/category_title')).element_by(
             have.text('Медицинская одежда')).click()
 
-        return self
-
     @allure.step('Проверка результатов поиска')
     def check_search_results(self):
         browser.element((AppiumBy.ID, 'com.kazanexpress.ke_app:id/title')).should(
